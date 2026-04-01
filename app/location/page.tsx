@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import info from "@/data/info.json";
 
 export const metadata: Metadata = {
-  title: "오시는 길 | 타임스터디카페 구리갈매점",
-  description: "타임스터디카페 구리갈매점 위치와 교통 안내입니다.",
+  title: "오시는 길 | 구리갈매 스터디카페 타임",
+  description: "구리갈매 스터디카페 타임 위치와 교통 안내입니다.",
 };
 
 export default function LocationPage() {
@@ -13,7 +13,7 @@ export default function LocationPage() {
       <section className="bg-primary text-white py-16">
         <div className="max-w-6xl mx-auto px-4 text-center">
           <h1 className="text-3xl md:text-4xl font-bold mb-3">오시는 길</h1>
-          <p className="text-gray-300">타임스터디카페 구리갈매점 위치를 안내합니다</p>
+          <p className="text-gray-300">구리갈매 스터디카페 타임 위치를 안내합니다</p>
         </div>
       </section>
 
@@ -44,7 +44,7 @@ export default function LocationPage() {
                 주소
               </h2>
               <p className="text-text-light">
-                {info.address} {info.addressDetail}
+                {info.roadAddress} {info.addressDetail}
               </p>
             </div>
 

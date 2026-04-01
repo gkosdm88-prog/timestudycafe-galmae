@@ -1,6 +1,6 @@
 import { ImageResponse } from "next/og";
 
-export const alt = "타임스터디카페 구리갈매점 | 몰입의 공간";
+export const alt = "구리갈매 스터디카페 타임 | 몰입의 공간";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -37,7 +37,7 @@ export default async function Image() {
 
         {/* Cafe name */}
         <div style={{ display: "flex", fontSize: "28px", fontWeight: 600, color: "#a1a1aa", marginBottom: "20px" }}>
-          타임스터디카페 구리갈매점
+          구리갈매 스터디카페 타임
         </div>
 
         {/* Divider */}

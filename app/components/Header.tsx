@@ -35,7 +35,7 @@ export default function Header() {
             T
           </div>
           <span className="text-text-primary font-bold text-base tracking-tight hidden sm:inline">
-            타임스터디
+            스터디카페 타임
           </span>
         </a>
 

@@ -1,28 +1,30 @@
 {
-  "name": "타임스터디카페",
+  "name": "스터디카페 타임",
   "branch": "구리갈매점",
-  "fullName": "타임스터디카페 구리갈매점",
-  "description": "집중할 수 있는 나만의 공간, 타임스터디카페에서 시작하세요.",
-  "phone": "031-000-0000",
-  "address": "경기도 구리시 갈매동 000-0",
-  "addressDetail": "1층",
+  "fullName": "구리갈매 스터디카페 타임",
+  "description": "집중할 수 있는 나만의 공간, 스터디카페 타임에서 시작하세요.",
+  "phone": "0507-1422-8410",
+  "address": "경기 구리시 갈매동 601-1",
+  "roadAddress": "경기 구리시 갈매중앙로 89-8",
+  "addressDetail": "4층 403호",
   "operatingHours": {
-    "weekday": "06:00 ~ 24:00",
-    "weekend": "06:00 ~ 24:00",
-    "holiday": "06:00 ~ 24:00"
+    "weekday": "00:00 ~ 24:00",
+    "weekend": "00:00 ~ 24:00",
+    "holiday": "00:00 ~ 24:00"
   },
   "sns": {
-    "instagram": "https://instagram.com/timestudycafe",
-    "kakao": "https://pf.kakao.com/timestudycafe",
+    "instagram": "",
+    "kakao": "",
     "blog": ""
   },
+  "naverPlace": "https://map.naver.com/p/entry/place/2069245393",
   "transportation": {
     "subway": "갈매역 1번 출구에서 도보 5분",
-    "bus": "갈매역 정류장 하차 (100, 200번)",
+    "bus": "갈매역 정류장 하차",
     "parking": "건물 내 무료 주차 가능"
   },
   "coordinates": {
-    "lat": 37.6103,
-    "lng": 127.0855
+    "lat": 37.6329101,
+    "lng": 127.1173149
   }
 }

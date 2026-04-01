@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import pricing from "@/data/pricing.json";
 
 export const metadata: Metadata = {
-  title: "이용안내 | 타임스터디카페 구리갈매점",
-  description: "타임스터디카페 구리갈매점의 이용 요금 및 이용 규칙을 안내합니다.",
+  title: "이용안내 | 구리갈매 스터디카페 타임",
+  description: "구리갈매 스터디카페 타임의 이용 요금 및 이용 규칙을 안내합니다.",
 };
 
 export default function PricingPage() {
@@ -57,13 +57,61 @@ export default function PricingPage() {
           </div>
         </div>
 
-        {/* Locker */}
+        {/* Charge */}
         <div className="mb-16">
           <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
             <span className="w-1.5 h-6 bg-accent rounded-full inline-block" />
-            사물함
+            충전권
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            {pricing.charge.map((item) => (
+              <div
+                key={item.name}
+                className="bg-white border border-gray-200 rounded-xl p-6 text-center hover:border-accent hover:shadow-md transition-all"
+              >
+                <p className="text-lg font-semibold mb-1">{item.name}</p>
+                <p className="text-3xl font-bold text-accent mb-2">{item.price}</p>
+                <p className="text-text-light text-sm">{item.note}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Fixed Seat */}
+        <div className="mb-16">
+          <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
+            <span className="w-1.5 h-6 bg-accent rounded-full inline-block" />
+            고정석
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-md">
+            {pricing.fixed.map((item) => (
+              <div
+                key={item.name}
+                className="bg-white border border-gray-200 rounded-xl p-5 text-center hover:border-accent hover:shadow-md transition-all"
+              >
+                <p className="text-text-light text-sm mb-1">{item.name}</p>
+                <p className="text-2xl font-bold text-primary">{item.price}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Studyroom + Locker */}
+        <div className="mb-16">
+          <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
+            <span className="w-1.5 h-6 bg-accent rounded-full inline-block" />
+            스터디룸 / 사물함
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-md">
+            {pricing.studyroom.map((item) => (
+              <div
+                key={item.name}
+                className="bg-white border border-gray-200 rounded-xl p-5 text-center hover:border-accent hover:shadow-md transition-all"
+              >
+                <p className="text-text-light text-sm mb-1">{item.name}</p>
+                <p className="text-2xl font-bold text-primary">{item.price}</p>
+              </div>
+            ))}
             {pricing.locker.map((item) => (
               <div
                 key={item.name}

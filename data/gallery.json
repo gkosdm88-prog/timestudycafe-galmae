@@ -10,7 +10,7 @@
   "images": [
     { "src": "/images/interior-1.jpg", "alt": "카페 내부 전경" },
     { "src": "/images/interior-2.jpg", "alt": "개인 좌석 구역" },
-    { "src": "/images/interior-3.jpg", "alt": "스터디룸" },
-    { "src": "/images/interior-4.jpg", "alt": "라운지 공간" }
+    { "src": "/images/interior-3.jpg", "alt": "스터디룸 입구" },
+    { "src": "/images/interior-4.jpg", "alt": "독서대 시설" }
   ]
 }

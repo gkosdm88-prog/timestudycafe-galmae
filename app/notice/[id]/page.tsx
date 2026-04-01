@@ -16,7 +16,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const notice = notices.find((n) => String(n.id) === id);
   if (!notice) return { title: "공지사항을 찾을 수 없습니다" };
   return {
-    title: `${notice.title} | 타임스터디카페 구리갈매점`,
+    title: `${notice.title} | 구리갈매 스터디카페 타임`,
     description: notice.content.slice(0, 100),
   };
 }

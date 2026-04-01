@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import gallery from "@/data/gallery.json";
 
 export const metadata: Metadata = {
-  title: "시설안내 | 타임스터디카페 구리갈매점",
-  description: "타임스터디카페 구리갈매점의 시설과 내부 공간을 소개합니다.",
+  title: "시설안내 | 구리갈매 스터디카페 타임",
+  description: "구리갈매 스터디카페 타임의 시설과 내부 공간을 소개합니다.",
 };
 
 const iconMap: Record<string, React.ReactNode> = {

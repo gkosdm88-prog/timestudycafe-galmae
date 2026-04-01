@@ -3,8 +3,8 @@ import Link from "next/link";
 import notices from "@/data/notices.json";
 
 export const metadata: Metadata = {
-  title: "공지사항 | 타임스터디카페 구리갈매점",
-  description: "타임스터디카페 구리갈매점의 공지사항과 이벤트 소식을 확인하세요.",
+  title: "공지사항 | 구리갈매 스터디카페 타임",
+  description: "구리갈매 스터디카페 타임의 공지사항과 이벤트 소식을 확인하세요.",
 };
 
 export default function NoticePage() {

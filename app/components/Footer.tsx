@@ -30,7 +30,7 @@ export default function Footer() {
               <div className="w-7 h-7 rounded-lg bg-gradient-to-br from-accent to-accent2 flex items-center justify-center text-white font-black text-xs">
                 T
               </div>
-              <span className="text-text-primary font-bold text-sm">타임스터디카페</span>
+              <span className="text-text-primary font-bold text-sm">스터디카페 타임</span>
             </div>
             <p className="text-text-muted text-xs leading-relaxed">
               {info.description}
@@ -64,7 +64,7 @@ export default function Footer() {
               연락처
             </h4>
             <div className="space-y-2.5 text-sm text-text-secondary">
-              <p>{info.address}</p>
+              <p>{info.roadAddress} {info.addressDetail}</p>
               <a href={`tel:${info.phone}`} className="block hover:text-accent transition-colors">
                 {info.phone}
               </a>

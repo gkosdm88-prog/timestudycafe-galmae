@@ -5,13 +5,13 @@ import Footer from "./components/Footer";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://timestudycafe-galmae.vercel.app"),
-  title: "타임스터디카페 구리갈매점 | 몰입의 공간",
+  title: "구리갈매 스터디카페 타임 | 몰입의 공간",
   description:
-    "집중할 수 있는 나만의 공간, 타임스터디카페 구리갈매점. 쾌적한 환경, 합리적인 가격으로 공부하세요.",
-  keywords: "스터디카페, 구리, 갈매, 타임스터디카페, 독서실, 자습실",
+    "집중할 수 있는 나만의 공간, 구리갈매 스터디카페 타임. 24시간 운영, 합리적인 가격으로 공부하세요.",
+  keywords: "스터디카페, 구리, 갈매, 스터디카페타임, 독서실, 자습실, 24시간",
   openGraph: {
-    title: "타임스터디카페 구리갈매점 | 몰입의 공간",
-    description: "집중할 수 있는 나만의 공간, 타임스터디카페 구리갈매점",
+    title: "구리갈매 스터디카페 타임 | 몰입의 공간",
+    description: "집중할 수 있는 나만의 공간, 구리갈매 스터디카페 타임",
     type: "website",
   },
 };
