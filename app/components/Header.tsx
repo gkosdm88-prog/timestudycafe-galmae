@@ -6,7 +6,7 @@ const navItems = [
   { href: "#hero", label: "홈" },
   { href: "#about", label: "소개" },
   { href: "#facility", label: "시설" },
-  { href: "#pricing", label: "가격표" },
+  { href: "#pricing", label: "가격" },
   { href: "#notice", label: "공지" },
   { href: "#location", label: "위치" },
 ];
@@ -23,42 +23,48 @@ export default function Header() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         scrolled
-          ? "bg-dark/90 backdrop-blur-md border-b border-dark-border"
+          ? "glass shadow-lg shadow-black/20"
           : "bg-transparent"
       }`}
     >
-      <div className="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
-        <a href="#hero" className="flex items-center gap-2">
-          <span className="text-accent font-bold text-lg tracking-tight">
-            TIME
-          </span>
-          <span className="text-text-primary font-light text-lg">
-            STUDY CAFE
+      <div className="max-w-7xl mx-auto px-6 h-18 flex items-center justify-between">
+        <a href="#hero" className="group flex items-center gap-1.5">
+          <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-accent to-accent2 flex items-center justify-center text-white font-black text-sm">
+            T
+          </div>
+          <span className="text-text-primary font-bold text-base tracking-tight hidden sm:inline">
+            타임스터디
           </span>
         </a>
 
         {/* Desktop Nav */}
-        <nav className="hidden md:flex items-center gap-1">
+        <nav className="hidden md:flex items-center gap-0.5">
           {navItems.map((item) => (
             <a
               key={item.href}
               href={item.href}
-              className="px-4 py-2 rounded-lg text-sm font-medium text-text-secondary hover:text-accent transition-colors"
+              className="px-4 py-2 rounded-full text-[13px] font-medium text-text-secondary hover:text-text-primary hover:bg-white/5 transition-all duration-300"
             >
               {item.label}
             </a>
           ))}
+          <a
+            href="#pricing"
+            className="ml-3 px-5 py-2 rounded-full text-[13px] font-semibold bg-accent text-white hover:bg-accent-light transition-all duration-300"
+          >
+            이용하기
+          </a>
         </nav>
 
         {/* Mobile Menu Button */}
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="md:hidden p-2 rounded-lg text-text-secondary hover:text-accent transition-colors"
-          aria-label="메뉴 열기"
+          className="md:hidden w-10 h-10 rounded-xl flex items-center justify-center text-text-secondary hover:text-text-primary hover:bg-white/5 transition-all"
+          aria-label="메뉴"
         >
-          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             {isOpen ? (
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
             ) : (
@@ -69,20 +75,24 @@ export default function Header() {
       </div>
 
       {/* Mobile Nav */}
-      {isOpen && (
-        <nav className="md:hidden bg-dark-light/95 backdrop-blur-md border-t border-dark-border">
+      <div
+        className={`md:hidden transition-all duration-300 overflow-hidden ${
+          isOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+        }`}
+      >
+        <nav className="glass border-t border-white/5 px-4 py-3">
           {navItems.map((item) => (
             <a
               key={item.href}
               href={item.href}
               onClick={() => setIsOpen(false)}
-              className="block px-6 py-3.5 text-sm text-text-secondary hover:text-accent hover:bg-dark-card transition-colors"
+              className="block px-4 py-3 rounded-xl text-sm text-text-secondary hover:text-text-primary hover:bg-white/5 transition-all"
             >
               {item.label}
             </a>
           ))}
         </nav>
-      )}
+      </div>
     </header>
   );
 }
