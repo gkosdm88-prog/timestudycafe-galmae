@@ -2,14 +2,16 @@
 
 import {
   ScrollReveal,
-  TextReveal,
   TiltCard,
   Counter,
   MagneticButton,
   CursorFollower,
   ScrollProgress,
-  Parallax,
+  MouseGradient,
+  TextScramble,
   TypeWriter,
+  Particles,
+  SplitText,
 } from "./Interactions";
 
 import type { InfoData, PricingData, GalleryData, NoticeData } from "./types";
@@ -39,12 +41,14 @@ export default function HomePage({
 
       {/* ═══════════════ HERO ═══════════════ */}
       <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0">
-          <Parallax speed={0.3} className="absolute top-1/4 left-1/4 w-[600px] h-[600px] rounded-full bg-accent/[0.07] blur-[150px]"><div /></Parallax>
-          <Parallax speed={-0.2} className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] rounded-full bg-accent2/[0.06] blur-[120px]"><div /></Parallax>
-          <Parallax speed={0.15} className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[350px] h-[350px] rounded-full bg-accent3/[0.04] blur-[100px]"><div /></Parallax>
-        </div>
-        <div className="absolute inset-0 grid-bg opacity-40" />
+        {/* Particle background */}
+        <Particles count={60} className="z-[1]" />
+        {/* Mouse-reactive gradient */}
+        <MouseGradient className="z-[2]" />
+        {/* Static orbs */}
+        <div className="absolute top-1/4 left-1/4 w-[600px] h-[600px] rounded-full bg-accent/[0.06] blur-[150px] animate-float" />
+        <div className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] rounded-full bg-accent2/[0.05] blur-[120px] animate-float" style={{ animationDelay: "-3s" }} />
+        <div className="absolute inset-0 grid-bg opacity-30" />
 
         <div className="relative text-center px-6 max-w-5xl mx-auto">
           <ScrollReveal delay={0}>
@@ -58,10 +62,10 @@ export default function HomePage({
 
           <ScrollReveal delay={0.15}>
             <h1 className="text-6xl sm:text-8xl md:text-9xl lg:text-[10rem] font-black leading-[0.85] tracking-tighter mb-8">
-              <span className="gradient-text">몰입</span>
-              <span className="text-text-primary">의</span>
+              <span className="animated-gradient-text"><SplitText text="몰입" delay={0.2} /></span>
+              <SplitText text="의" delay={0.35} className="text-text-primary" />
               <br />
-              <span className="text-text-primary">공간</span>
+              <SplitText text="공간" delay={0.5} className="text-text-primary" />
             </h1>
           </ScrollReveal>
 
@@ -142,7 +146,7 @@ export default function HomePage({
 
           <ScrollReveal delay={0.1}>
             <h2 className="text-center text-4xl md:text-6xl font-black mb-20 tracking-tight">
-              누구를 위한<br /><span className="gradient-text">공간</span>인가요?
+              <TextScramble text="누구를 위한" className="block" /><span className="animated-gradient-text"><TextScramble text="공간" /></span><TextScramble text="인가요?" />
             </h2>
           </ScrollReveal>
 
@@ -181,7 +185,7 @@ export default function HomePage({
               <ScrollReveal key={stat.label} delay={i * 0.1}>
                 <div className="text-center py-6">
                   <p className="text-4xl md:text-5xl font-black gradient-text mb-2">
-                    <Counter value={stat.value} suffix={stat.suffix} prefix={stat.prefix} duration={2000} />
+                    <Counter value={stat.value} suffix={stat.suffix} prefix={stat.prefix} />
                   </p>
                   <p className="text-text-primary text-sm font-semibold mb-1">{stat.label}</p>
                   <p className="text-text-muted text-xs">{stat.sub}</p>
@@ -204,7 +208,7 @@ export default function HomePage({
           </ScrollReveal>
           <ScrollReveal delay={0.1}>
             <h2 className="text-center text-4xl md:text-6xl font-black mb-6 tracking-tight">
-              최적의 <span className="gradient-text">학습 환경</span>
+              최적의 <span className="animated-gradient-text"><TextScramble text="학습 환경" /></span>
             </h2>
             <p className="text-center text-text-muted mb-20 max-w-md mx-auto">
               집중력을 극대화하기 위한 모든 것을 갖추었습니다
@@ -263,7 +267,7 @@ export default function HomePage({
               <div className="h-px flex-1 bg-gradient-to-l from-transparent to-dark-border" />
             </div>
             <h2 className="text-center text-4xl md:text-6xl font-black mb-6 tracking-tight">
-              합리적인 <span className="gradient-text">가격</span>
+              합리적인 <span className="animated-gradient-text"><TextScramble text="가격" /></span>
             </h2>
             <p className="text-center text-text-muted mb-20 max-w-md mx-auto">
               필요한 만큼, 원하는 방식으로 이용하세요
@@ -399,7 +403,7 @@ export default function HomePage({
               <div className="h-px flex-1 bg-gradient-to-l from-transparent to-dark-border" />
             </div>
             <h2 className="text-center text-4xl md:text-6xl font-black mb-20 tracking-tight">
-              <span className="gradient-text">소식</span>
+              <span className="animated-gradient-text"><TextScramble text="소식" /></span>
             </h2>
           </ScrollReveal>
 
@@ -444,7 +448,7 @@ export default function HomePage({
               <div className="h-px flex-1 bg-gradient-to-l from-transparent to-dark-border" />
             </div>
             <h2 className="text-center text-4xl md:text-6xl font-black mb-20 tracking-tight">
-              오시는 <span className="gradient-text">길</span>
+              오시는 <span className="animated-gradient-text"><TextScramble text="길" /></span>
             </h2>
           </ScrollReveal>
 
