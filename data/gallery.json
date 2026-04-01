@@ -1,0 +1,16 @@
+{
+  "facilities": [
+    { "name": "개인 좌석", "description": "넓은 개인 책상과 콘센트 완비", "icon": "desk" },
+    { "name": "스터디룸", "description": "그룹 스터디를 위한 독립 공간", "icon": "room" },
+    { "name": "사물함", "description": "개인 소지품 안전 보관", "icon": "locker" },
+    { "name": "프린터/복합기", "description": "출력, 복사, 스캔 가능", "icon": "printer" },
+    { "name": "무료 Wi-Fi", "description": "고속 인터넷 무료 제공", "icon": "wifi" },
+    { "name": "무료 음료", "description": "커피, 차 등 무료 음료 제공", "icon": "coffee" }
+  ],
+  "images": [
+    { "src": "/images/interior-1.jpg", "alt": "카페 내부 전경" },
+    { "src": "/images/interior-2.jpg", "alt": "개인 좌석 구역" },
+    { "src": "/images/interior-3.jpg", "alt": "스터디룸" },
+    { "src": "/images/interior-4.jpg", "alt": "라운지 공간" }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "name": "타임스터디카페",
+  "branch": "구리갈매점",
+  "fullName": "타임스터디카페 구리갈매점",
+  "description": "집중할 수 있는 나만의 공간, 타임스터디카페에서 시작하세요.",
+  "phone": "031-000-0000",
+  "address": "경기도 구리시 갈매동 000-0",
+  "addressDetail": "1층",
+  "operatingHours": {
+    "weekday": "06:00 ~ 24:00",
+    "weekend": "06:00 ~ 24:00",
+    "holiday": "06:00 ~ 24:00"
+  },
+  "sns": {
+    "instagram": "https://instagram.com/timestudycafe",
+    "kakao": "https://pf.kakao.com/timestudycafe",
+    "blog": ""
+  },
+  "transportation": {
+    "subway": "갈매역 1번 출구에서 도보 5분",
+    "bus": "갈매역 정류장 하차 (100, 200번)",
+    "parking": "건물 내 무료 주차 가능"
+  },
+  "coordinates": {
+    "lat": 37.6103,
+    "lng": 127.0855
+  }
+}
