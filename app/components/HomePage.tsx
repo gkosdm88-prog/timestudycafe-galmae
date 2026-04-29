@@ -14,25 +14,17 @@ import {
   SplitText,
 } from "./Interactions";
 
-import type { InfoData, PricingData, GalleryData, NoticeData } from "./types";
+import type { InfoData, PricingData, GalleryData } from "./types";
 
 export default function HomePage({
   info,
   pricing,
   gallery,
-  notices,
 }: {
   info: InfoData;
   pricing: PricingData;
   gallery: GalleryData;
-  notices: NoticeData[];
 }) {
-  const recentNotices = [...notices]
-    .sort((a, b) => {
-      if (a.pinned !== b.pinned) return a.pinned ? -1 : 1;
-      return new Date(b.date).getTime() - new Date(a.date).getTime();
-    })
-    .slice(0, 3);
 
   return (
     <>
@@ -62,10 +54,10 @@ export default function HomePage({
 
           <ScrollReveal delay={0.15}>
             <h1 className="text-6xl sm:text-8xl md:text-9xl lg:text-[10rem] font-black leading-[0.85] tracking-tighter mb-8">
-              <span className="animated-gradient-text"><SplitText text="몰입" delay={0.2} /></span>
-              <SplitText text="의" delay={0.35} className="text-text-primary" />
+              <span className="animated-gradient-text">몰입</span>
+              <span className="text-text-primary">의</span>
               <br />
-              <SplitText text="공간" delay={0.5} className="text-text-primary" />
+              <SplitText text="공간" delay={0.3} className="text-text-primary" />
             </h1>
           </ScrollReveal>
 
@@ -393,58 +385,13 @@ export default function HomePage({
         </div>
       </section>
 
-      {/* ═══════════════ NOTICE ═══════════════ */}
-      <section id="notice" className="relative py-28 md:py-40 noise">
-        <div className="relative z-10 max-w-4xl mx-auto px-6">
-          <ScrollReveal>
-            <div className="flex items-center gap-4 mb-4">
-              <div className="h-px flex-1 bg-gradient-to-r from-transparent to-dark-border" />
-              <span className="text-[11px] text-text-muted font-mono tracking-widest uppercase">04 / Notice</span>
-              <div className="h-px flex-1 bg-gradient-to-l from-transparent to-dark-border" />
-            </div>
-            <h2 className="text-center text-4xl md:text-6xl font-black mb-20 tracking-tight">
-              <span className="animated-gradient-text"><TextScramble text="소식" /></span>
-            </h2>
-          </ScrollReveal>
-
-          <div className="space-y-3">
-            {recentNotices.map((notice, i) => (
-              <ScrollReveal key={notice.id} delay={i * 0.1} direction="left">
-                <a
-                  href={`/notice/${notice.id}`}
-                  className="group flex items-center gap-4 bg-dark-card border border-dark-border rounded-2xl p-5 hover:border-accent/30 transition-all duration-300 card-shine hover:scale-[1.01] hover:shadow-[0_0_30px_rgba(99,102,241,0.06)]"
-                >
-                  <span className="text-accent/30 font-mono text-xs font-bold shrink-0">0{i + 1}</span>
-                  <div className="flex-1 min-w-0 flex items-center gap-3">
-                    <span className={`shrink-0 px-2 py-0.5 rounded-md text-[10px] font-bold tracking-wider uppercase ${
-                      notice.category === "이벤트" ? "bg-red-500/10 text-red-400" : "bg-accent/10 text-accent"
-                    }`}>
-                      {notice.category}
-                    </span>
-                    <span className="text-text-primary text-sm font-medium truncate group-hover:text-accent transition-colors duration-300">
-                      {notice.title}
-                    </span>
-                  </div>
-                  <div className="flex items-center gap-3 shrink-0">
-                    <time className="text-text-muted text-xs hidden sm:block">{notice.date}</time>
-                    <svg className="w-4 h-4 text-text-muted group-hover:text-accent group-hover:translate-x-1 transition-all" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                    </svg>
-                  </div>
-                </a>
-              </ScrollReveal>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* ═══════════════ LOCATION ═══════════════ */}
       <section id="location" className="relative py-28 md:py-40 bg-dark-light noise">
         <div className="relative z-10 max-w-7xl mx-auto px-6">
           <ScrollReveal>
             <div className="flex items-center gap-4 mb-4">
               <div className="h-px flex-1 bg-gradient-to-r from-transparent to-dark-border" />
-              <span className="text-[11px] text-text-muted font-mono tracking-widest uppercase">05 / Location</span>
+              <span className="text-[11px] text-text-muted font-mono tracking-widest uppercase">04 / Location</span>
               <div className="h-px flex-1 bg-gradient-to-l from-transparent to-dark-border" />
             </div>
             <h2 className="text-center text-4xl md:text-6xl font-black mb-20 tracking-tight">

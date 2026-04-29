@@ -7,7 +7,6 @@ const navItems = [
   { href: "#about", label: "소개" },
   { href: "#facility", label: "시설" },
   { href: "#pricing", label: "가격" },
-  { href: "#notice", label: "공지" },
   { href: "#location", label: "위치" },
 ];
 
