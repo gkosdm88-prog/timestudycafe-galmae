@@ -12,6 +12,7 @@ import {
   TypeWriter,
   Particles,
   SplitText,
+  HeroSlideshow,
 } from "./Interactions";
 
 import type { InfoData, PricingData, GalleryData } from "./types";
@@ -33,16 +34,14 @@ export default function HomePage({
 
       {/* ═══════════════ HERO ═══════════════ */}
       <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+        {/* Background slideshow */}
+        <HeroSlideshow images={["/images/hero-1.jpg", "/images/hero-2.jpg"]} interval={5000} className="z-[0]" />
         {/* Particle background */}
         <Particles count={60} className="z-[1]" />
         {/* Mouse-reactive gradient */}
         <MouseGradient className="z-[2]" />
-        {/* Static orbs */}
-        <div className="absolute top-1/4 left-1/4 w-[600px] h-[600px] rounded-full bg-accent/[0.06] blur-[150px] animate-float" />
-        <div className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] rounded-full bg-accent2/[0.05] blur-[120px] animate-float" style={{ animationDelay: "-3s" }} />
-        <div className="absolute inset-0 grid-bg opacity-30" />
 
-        <div className="relative text-center px-6 max-w-5xl mx-auto">
+        <div className="relative text-center px-6 max-w-5xl mx-auto z-[3]">
           <ScrollReveal delay={0}>
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-dark-border bg-dark-card/50 backdrop-blur-sm mb-8">
               <span className="relative w-2 h-2 rounded-full bg-green-400">
@@ -170,7 +169,7 @@ export default function HomePage({
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {[
               { value: 24, suffix: "h", label: "운영시간", sub: "연중무휴" },
-              { value: 100, suffix: "+", label: "좌석 수", sub: "넉넉한 공간" },
+              { value: 48, suffix: "+", label: "좌석 수", sub: "넉넉한 공간" },
               { value: 5, suffix: "min", label: "역에서 도보", sub: "갈매역 기준" },
               { value: 0, suffix: "", label: "음료 비용", sub: "커피 & 차 무료", prefix: "₩" },
             ].map((stat, i) => (
